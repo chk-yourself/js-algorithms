@@ -1,7 +1,15 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "prettier", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
-  "rules": {
-    "prettier/prettier": ["error"]
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
   },
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }]
+  }
 }
